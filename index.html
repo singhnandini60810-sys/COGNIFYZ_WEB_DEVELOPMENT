@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cognifyz Internship | Nandini Singh</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Yeseva+One&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --cream: #fff3d6;
+      --red: #d92d27;
+      --pink: #f65d83;
+      --green: #27664c;
+      --yellow: #f6bd25;
+      --blue: #176c82;
+      --brown: #42251c;
+      --black: #191512;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* =================================
+       DECORATIVE BACKGROUND
+    ================================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .035;
+
+      background-image:
+        radial-gradient(var(--brown) 1px, transparent 1px);
+
+      background-size: 8px 8px;
+    }
+
+    /* =================================
+       NAV
+    ================================= */
+
+    nav {
+      min-height: 76px;
+      padding: 0 6%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-bottom: 2px solid var(--black);
+
+      position: relative;
+      z-index: 5;
+    }
+
+    .logo {
+      font-family: "Yeseva One", serif;
+      font-size: 22px;
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-right p {
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+
+    .stamp {
+      padding: 8px 14px;
+
+      border: 2px solid var(--red);
+      border-radius: 50%;
+
+      color: var(--red);
+
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+      font-weight: 500;
+
+      transform: rotate(6deg);
+    }
+
+    /* =================================
+       HERO
+    ================================= */
+
+    header {
+      min-height: 650px;
+
+      padding: 80px 7%;
+
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+
+      gap: 60px;
+
+      border-bottom: 2px solid var(--black);
+
+      position: relative;
+    }
+
+    .small-label {
+      display: inline-block;
+
+      padding: 7px 12px;
+
+      background: var(--green);
+      color: var(--cream);
+
+      border: 2px solid var(--black);
+
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+      letter-spacing: 2px;
+
+      transform: rotate(-1deg);
+    }
+
+    h1 {
+      margin-top: 25px;
+
+      font-family: "Yeseva One", serif;
+
+      font-size: clamp(65px, 8vw, 120px);
+      font-weight: 400;
+
+      line-height: .82;
+
+      letter-spacing: -4px;
+    }
+
+    h1 span {
+      display: block;
+
+      color: var(--red);
+
+      -webkit-text-stroke: 1px var(--black);
+
+      text-shadow:
+        4px 4px 0 var(--yellow);
+    }
+
+    .hindi {
+      margin-top: 25px;
+
+      color: var(--green);
+
+      font-size: 17px;
+      font-weight: 700;
+
+      letter-spacing: 3px;
+    }
+
+    .intro {
+      max-width: 570px;
+
+      margin-top: 25px;
+
+      color: #65534b;
+
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .hero-tags {
+      margin-top: 30px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 9px;
+    }
+
+    .hero-tags span {
+      padding: 8px 12px;
+
+      border: 1.5px solid var(--black);
+      border-radius: 30px;
+
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+
+      background: rgba(255,255,255,.3);
+    }
+
+    /* =================================
+       HERO ART
+    ================================= */
+
+    .hero-art {
+      min-height: 470px;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sun {
+      width: 330px;
+      height: 330px;
+
+      border-radius: 50%;
+
+      background: var(--yellow);
+
+      border: 3px solid var(--black);
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow:
+        13px 13px 0 var(--pink);
+    }
+
+    .sun::before {
+      content: "";
+
+      position: absolute;
+
+      width: 245px;
+      height: 245px;
+
+      border: 2px dashed var(--red);
+      border-radius: 50%;
+
+      animation: spin 25s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .sun-text {
+      text-align: center;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .sun-text small {
+      display: block;
+
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+      letter-spacing: 3px;
+    }
+
+    .sun-text strong {
+      display: block;
+
+      margin-top: 8px;
+
+      font-family: "Yeseva One", serif;
+
+      font-size: 50px;
+      line-height: .85;
+
+      color: var(--red);
+    }
+
+    .sun-text span {
+      display: block;
+
+      margin-top: 12px;
+
+      font-size: 21px;
+    }
+
+    .flower {
+      position: absolute;
+
+      font-size: 65px;
+
+      color: var(--green);
+    }
+
+    .f1 {
+      left: 5px;
+      bottom: 45px;
+      transform: rotate(-15deg);
+    }
+
+    .f2 {
+      right: 5px;
+      top: 30px;
+      transform: rotate(15deg);
+    }
+
+    .mini-sticker {
+      position: absolute;
+
+      right: 0;
+      bottom: 35px;
+
+      width: 110px;
+      height: 110px;
+
+      border-radius: 50%;
+
+      background: var(--blue);
+      color: white;
+
+      border: 2px solid var(--black);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      line-height: 1.5;
+
+      transform: rotate(9deg);
+    }
+
+    /* =================================
+       STRIP
+    ================================= */
+
+    .strip {
+      overflow: hidden;
+
+      padding: 13px;
+
+      background: var(--red);
+      color: var(--cream);
+
+      border-bottom: 2px solid var(--black);
+
+      white-space: nowrap;
+
+      text-align: center;
+
+      font-family: "DM Mono", monospace;
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: 3px;
+    }
+
+    /* =================================
+       PROJECTS
+    ================================= */
+
+    main {
+      padding: 100px 7% 120px;
+    }
+
+    .project-heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 40px;
+
+      align-items: end;
+
+      margin-bottom: 55px;
+    }
+
+    .project-heading small {
+      font-family: "DM Mono", monospace;
+
+      color: var(--red);
+
+      font-size: 8px;
+
+      letter-spacing: 3px;
+    }
+
+    .project-heading h2 {
+      margin-top: 10px;
+
+      font-family: "Yeseva One", serif;
+
+      font-size: clamp(45px, 6vw, 75px);
+
+      line-height: .95;
+    }
+
+    .project-heading p {
+      max-width: 480px;
+
+      justify-self: end;
+
+      color: #68574f;
+
+      line-height: 1.7;
+
+      font-size: 14px;
+    }
+
+    /* =================================
+       PROJECT GRID
+    ================================= */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      border-top: 2px solid var(--black);
+      border-left: 2px solid var(--black);
+    }
+
+    .project {
+      min-height: 390px;
+
+      padding: 32px;
+
+      position: relative;
+
+      border-right: 2px solid var(--black);
+      border-bottom: 2px solid var(--black);
+
+      text-decoration: none;
+
+      overflow: hidden;
+
+      transition: .25s ease;
+    }
+
+    .project:hover {
+      transform: translate(-5px, -5px);
+
+      box-shadow:
+        8px 8px 0 var(--black);
+
+      z-index: 3;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+
+      font-family: "DM Mono", monospace;
+
+      font-size: 8px;
+
+      letter-spacing: 2px;
+    }
+
+    .project-number {
+      opacity: .55;
+    }
+
+    .theme {
+      padding: 6px 9px;
+
+      border: 1px solid currentColor;
+    }
+
+    .project h3 {
+      max-width: 440px;
+
+      margin-top: 55px;
+
+      font-family: "Yeseva One", serif;
+
+      font-size: 38px;
+
+      line-height: 1;
+    }
+
+    .project > p {
+      max-width: 430px;
+
+      margin-top: 18px;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+    }
+
+    .open {
+      position: absolute;
+
+      left: 32px;
+      bottom: 30px;
+
+      font-family: "DM Mono", monospace;
+
+      font-size: 9px;
+      font-weight: 500;
+
+      letter-spacing: 1px;
+    }
+
+    /* DIFFERENT PROJECT WORLDS */
+
+    .chatpatti {
+      background: #f66a89;
+    }
+
+    .chatpatti .theme {
+      color: #6b171d;
+    }
+
+    .fairy {
+      background: #d8c9e8;
+      color: #45364f;
+    }
+
+    .fairy .theme {
+      color: #674d75;
+    }
+
+    .wizard {
+      background: #372018;
+      color: #ead5a6;
+    }
+
+    .wizard .theme {
+      color: #d3ad64;
+    }
+
+    .anime {
+      background: #172c37;
+      color: #e8fbff;
+    }
+
+    .anime .theme {
+      color: #55e7ff;
+    }
+
+    /* decorative card symbols */
+
+    .symbol {
+      position: absolute;
+
+      right: 30px;
+      bottom: 20px;
+
+      font-family: "Yeseva One", serif;
+
+      font-size: 100px;
+
+      opacity: .09;
+
+      pointer-events: none;
+    }
+
+    /* =================================
+       ENDING
+    ================================= */
+
+    .ending {
+      min-height: 430px;
+
+      padding: 80px 7%;
+
+      background: var(--green);
+      color: var(--cream);
+
+      border-top: 2px solid var(--black);
+      border-bottom: 2px solid var(--black);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .ending p:first-child {
+      font-family: "DM Mono", monospace;
+
+      color: #d9e8c9;
+
+      font-size: 8px;
+
+      letter-spacing: 3px;
+    }
+
+    .ending h2 {
+      max-width: 850px;
+
+      margin-top: 17px;
+
+      font-family: "Yeseva One", serif;
+
+      font-size: clamp(48px, 7vw, 90px);
+
+      font-weight: 400;
+
+      line-height: .9;
+    }
+
+    .ending h2 span {
+      color: var(--yellow);
+    }
+
+    .ending .quote {
+      max-width: 500px;
+
+      margin-top: 25px;
+
+      color: #d7decf;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    /* =================================
+       FOOTER
+    ================================= */
+
+    footer {
+      min-height: 100px;
+
+      padding: 25px 7%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    footer strong {
+      font-family: "Yeseva One", serif;
+
+      color: var(--red);
+
+      font-size: 20px;
+    }
+
+    footer p {
+      font-family: "DM Mono", monospace;
+
+      font-size: 8px;
+
+      letter-spacing: 1px;
+    }
+
+    /* =================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 850px) {
+
+      header {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        min-height: 450px;
+      }
+
+      .project-heading {
+        grid-template-columns: 1fr;
+      }
+
+      .project-heading p {
+        justify-self: start;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .nav-right p {
+        display: none;
+      }
+
+      header {
+        padding:
+          70px 6%;
+      }
+
+      h1 {
+        font-size: 64px;
+        letter-spacing: -3px;
+      }
+
+      .sun {
+        width: 280px;
+        height: 280px;
+      }
+
+      .sun::before {
+        width: 205px;
+        height: 205px;
+      }
+
+      .sun-text strong {
+        font-size: 42px;
+      }
+
+      .mini-sticker {
+        width: 90px;
+        height: 90px;
+        right: -5px;
+      }
+
+      main {
+        padding:
+          80px 6%;
+      }
+
+      .project {
+        min-height: 410px;
+      }
+
+      footer {
+        flex-direction: column;
+
+        text-align: center;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+
+    <div class="logo">
+      Cognifyz<span>×</span>Nandini
+    </div>
+
+    <div class="nav-right">
+
+      <p>
+        WEB DEVELOPMENT / 2026
+      </p>
+
+      <div class="stamp">
+        COMPLETE
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <header>
+
+    <div class="hero-copy">
+
+      <span class="small-label">
+        ✦ INTERNSHIP PROJECT ARCHIVE ✦
+      </span>
+
+      <h1>
+        FOUR
+        <span>WORLDS.</span>
+        ONE DEV.
+      </h1>
+
+      <p class="hindi">
+        ✦ अपना रंग • अपना कोड ✦
+      </p>
+
+      <p class="intro">
+        Four web-development tasks. Four completely different
+        visual identities. A little code, a lot of experimentation,
+        and absolutely no reason every project should look the same.
+      </p>
+
+      <div class="hero-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JAVASCRIPT</span>
+        <span>LEVEL 01</span>
+        <span>LEVEL 03</span>
+        <span>4 / 4 COMPLETE</span>
+      </div>
+
+    </div>
+
+
+    <div class="hero-art">
+
+      <span class="flower f1">✿</span>
+      <span class="flower f2">✤</span>
+
+      <div class="sun">
+
+        <div class="sun-text">
+
+          <small>COGNIFYZ</small>
+
+          <strong>
+            WEB<br>DEV
+          </strong>
+
+          <span>नमस्ते ✦</span>
+
+        </div>
+
+      </div>
+
+      <div class="mini-sticker">
+        MADE<br>
+        WITH<br>
+        ✦ CODE ✦
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <div class="strip">
+    CODE KARO ✦ CREATE KARO ✦ EXPERIMENT KARO ✦
+    CODE KARO ✦ CREATE KARO ✦ EXPERIMENT KARO ✦
+  </div>
+
+
+  <!-- PROJECT DIRECTORY -->
+  <main>
+
+    <div class="project-heading">
+
+      <div>
+
+        <small>
+          ०१ / PROJECT DIRECTORY
+        </small>
+
+        <h2>
+          CHOOSE YOUR<br>
+          WORLD.
+        </h2>
+
+      </div>
+
+      <p>
+        Each task explores a different visual direction while
+        demonstrating the required web-development concepts.
+        Pick a card and enter the project.
+      </p>
+
+    </div>
+
+
+    <div class="projects">
+
+
+      <!-- TASK 1 -->
+
+      <a
+        class="project chatpatti"
+        href="Level_1/Task_1/index.html"
+      >
+
+        <div class="project-top">
+
+          <span class="project-number">
+            LEVEL 01 / TASK 01
+          </span>
+
+          <span class="theme">
+            CHATPATTI BADDIE
+          </span>
+
+        </div>
+
+        <h3>
+          HTML & CSS
+          Foundations
+        </h3>
+
+        <p>
+          A bold desi-pop webpage featuring navigation,
+          imagery, content sections and a basic email form.
+        </p>
+
+        <span class="open">
+          ENTER PROJECT ↗
+        </span>
+
+        <span class="symbol">🌶</span>
+
+      </a>
+
+
+      <!-- TASK 2 -->
+
+      <a
+        class="project fairy"
+        href="Level_1/Task_2/index.html"
+      >
+
+        <div class="project-top">
+
+          <span class="project-number">
+            LEVEL 01 / TASK 02
+          </span>
+
+          <span class="theme">
+            FAIRYCORE
+          </span>
+
+        </div>
+
+        <h3>
+          JavaScript
+          Magic
+        </h3>
+
+        <p>
+          An enchanted interactive garden with a colour spell,
+          time-based greeting and number potion calculator.
+        </p>
+
+        <span class="open">
+          ENTER PROJECT ↗
+        </span>
+
+        <span class="symbol">✦</span>
+
+      </a>
+
+
+      <!-- TASK 3 -->
+
+      <a
+        class="project wizard"
+        href="Level_3/Task_1/index.html"
+      >
+
+        <div class="project-top">
+
+          <span class="project-number">
+            LEVEL 03 / TASK 01
+          </span>
+
+          <span class="theme">
+            WIZARDING CORE
+          </span>
+
+        </div>
+
+        <h3>
+          The Wizarding
+          Archive
+        </h3>
+
+        <p>
+          An atmospheric image archive featuring an automatic
+          slideshow and click-to-enlarge photograph gallery.
+        </p>
+
+        <span class="open">
+          ENTER PROJECT ↗
+        </span>
+
+        <span class="symbol">⚜</span>
+
+      </a>
+
+
+      <!-- TASK 4 -->
+
+      <a
+        class="project anime"
+        href="Level_3/Task_2/index.html"
+      >
+
+        <div class="project-top">
+
+          <span class="project-number">
+            LEVEL 03 / TASK 02
+          </span>
+
+          <span class="theme">
+            ANIME TECH
+          </span>
+
+        </div>
+
+        <h3>
+          Cognifyz Internship
+          Landing Page
+        </h3>
+
+        <p>
+          A futuristic landing page presenting the internship
+          program, benefits, skills, CTA and contact information.
+        </p>
+
+        <span class="open">
+          ENTER PROJECT ↗
+        </span>
+
+        <span class="symbol">未来</span>
+
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- ENDING -->
+
+  <section class="ending">
+
+    <p>
+      ✦ LEVEL 01 + LEVEL 03 / COMPLETE ✦
+    </p>
+
+    <h2>
+      MADE WITH
+      <span>THODA CODE,</span>
+      BOHOT CURIOSITY.
+    </h2>
+
+    <p class="quote">
+      Web Development Internship project collection created
+      as part of the Cognifyz Technologies Internship Program.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <strong>
+      Cognifyz × Nandini
+    </strong>
+
+    <p>
+      WEB DEVELOPMENT INTERNSHIP / 2026
+    </p>
+
+    <p>
+      MADE IN INDIA ✦
+    </p>
+
+  </footer>
+
+</body>
+</html>
