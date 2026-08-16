@@ -1,0 +1,629 @@
+/* =========================
+   BASE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fff6df;
+    color: #181818;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 78px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff6df;
+    border-bottom: 2px solid #181818;
+}
+
+.logo {
+    font-family: "Shrikhand", cursive;
+    font-size: 27px;
+
+    text-decoration: none;
+    color: #181818;
+}
+
+.logo span {
+    color: #ed174c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 42px;
+}
+
+.nav-links a {
+    color: #181818;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.nav-links a:hover {
+    color: #ed174c;
+}
+
+.nav-tag {
+    background: #d7f343;
+
+    border: 2px solid #181818;
+    border-radius: 50px;
+
+    padding: 9px 17px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    transform: rotate(2deg);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 620px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+
+    padding: 70px 7% 80px;
+
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+.mini-label {
+    display: inline-block;
+
+    background: #ed174c;
+    color: white;
+
+    border: 2px solid #181818;
+
+    padding: 8px 14px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+
+    transform: rotate(-1deg);
+}
+
+.hero h1 {
+    font-family: "Shrikhand", cursive;
+
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.91;
+
+    letter-spacing: 1px;
+}
+
+.hero h1 span {
+    color: #ed174c;
+
+    text-shadow:
+        3px 3px 0 #181818;
+}
+
+.hero-content > p {
+    max-width: 510px;
+
+    margin: 28px 0;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.main-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    background: #181818;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 16px 21px;
+
+    border: 2px solid #181818;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    box-shadow: 6px 6px 0 #ed174c;
+
+    transition: 0.2s ease;
+}
+
+.main-btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 #ed174c;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.visual {
+    min-height: 480px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink-shape {
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    background: #ff4e86;
+
+    right: 0;
+    top: 30px;
+}
+
+.image-frame {
+    width: 330px;
+    height: 420px;
+
+    border: 3px solid #181818;
+
+    padding: 8px;
+
+    background: white;
+
+    position: relative;
+    z-index: 2;
+
+    transform: rotate(3deg);
+
+    box-shadow: 10px 10px 0 #181818;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: saturate(1.2);
+}
+
+.sticker {
+    position: absolute;
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border: 2px solid #181818;
+
+    font-weight: 900;
+}
+
+.sticker-one {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: #d7f343;
+
+    left: 5px;
+    top: 45px;
+
+    transform: rotate(-13deg);
+
+    font-size: 14px;
+}
+
+.sticker-one span {
+    color: #ed174c;
+    font-size: 20px;
+}
+
+.sticker-two {
+    width: 120px;
+    height: 120px;
+
+    background: #ffcf2e;
+
+    right: -15px;
+    bottom: 10px;
+
+    transform: rotate(9deg);
+
+    font-size: 13px;
+}
+
+.sticker-two strong {
+    color: #ed174c;
+    font-size: 22px;
+}
+
+.star {
+    position: absolute;
+
+    color: #ed174c;
+
+    font-size: 55px;
+
+    z-index: 4;
+}
+
+.star-one {
+    left: 20px;
+    bottom: 70px;
+}
+
+.star-two {
+    right: 20px;
+    top: 0;
+
+    font-size: 35px;
+}
+
+
+/* =========================
+   TICKER
+========================= */
+
+.ticker {
+    overflow: hidden;
+
+    background: #181818;
+    color: #d7f343;
+
+    border-top: 2px solid #181818;
+    border-bottom: 2px solid #181818;
+
+    padding: 13px 0;
+
+    white-space: nowrap;
+}
+
+.ticker div {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 3px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 90px 7%;
+
+    background: #ffcf2e;
+
+    border-bottom: 2px solid #181818;
+}
+
+.section-number,
+.join-heading > p {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about h2 {
+    font-family: "Shrikhand", cursive;
+
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1;
+}
+
+.about h2 span {
+    display: block;
+    color: #ed174c;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.words {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    margin-top: 55px;
+}
+
+.words span {
+    border: 2px solid #181818;
+
+    background: #fff6df;
+
+    padding: 11px 20px;
+
+    border-radius: 50px;
+
+    font-weight: 900;
+    font-size: 12px;
+}
+
+
+/* =========================
+   JOIN
+========================= */
+
+.join {
+    padding: 90px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    background: #f55086;
+}
+
+.join h2 {
+    font-family: "Shrikhand", cursive;
+
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 0.95;
+}
+
+.join h2 span {
+    display: block;
+
+    color: #fff6df;
+
+    text-shadow:
+        3px 3px 0 #181818;
+}
+
+.form-area {
+    align-self: center;
+}
+
+.form-area > p {
+    margin-bottom: 22px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+
+    max-width: 520px;
+}
+
+input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 16px;
+
+    border: 2px solid #181818;
+    border-right: none;
+
+    background: #fff6df;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+button {
+    padding: 16px 22px;
+
+    border: 2px solid #181818;
+
+    background: #d7f343;
+    color: #181818;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffcf2e;
+}
+
+small {
+    display: block;
+
+    margin-top: 12px;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    min-height: 100px;
+
+    background: #181818;
+    color: white;
+
+    padding: 30px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: "Shrikhand", cursive;
+
+    color: #f55086;
+
+    font-size: 24px;
+}
+
+footer p {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-tag {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 60px;
+    }
+
+    .visual {
+        margin-top: 60px;
+    }
+
+    .about-content,
+    .join {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .visual {
+        min-height: 430px;
+    }
+
+    .pink-shape {
+        width: 300px;
+        height: 300px;
+    }
+
+    .image-frame {
+        width: 260px;
+        height: 350px;
+    }
+
+    .sticker-one {
+        left: -5px;
+    }
+
+    .sticker-two {
+        right: -5px;
+    }
+
+    .about,
+    .join {
+        padding: 70px 6%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input {
+        border-right: 2px solid #181818;
+        border-bottom: none;
+    }
+
+    footer {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
