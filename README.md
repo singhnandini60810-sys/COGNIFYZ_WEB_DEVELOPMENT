@@ -4,13 +4,13 @@ This repository contains the web development tasks completed as part of the **Co
 
 ## Live Projects
 
-| Project              | Theme             | Live Demo                                                                                             |
-| -------------------- | ----------------- | ----------------------------------------------------------------------------------------------------- |
-| **Project Hub**      | Indian Core       | [Open Project Hub](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/)                 |
-| **Level 1 — Task 1** | Chatpatti Baddie  | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_1/Task_1/) |
-| **Level 1 — Task 2** | Fairycore         | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_1/Task_2/) |
-| **Level 3 — Task 1** | Wizarding Archive | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_3/Task_1/) |
-| **Level 3 — Task 2** | Anime Tech Core   | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_3/Task_2/) |
+| Project              | Live Demo                                                                                             |
+| -------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Project Hub**      | [Open Project Hub](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/)                 |
+| **Level 1 — Task 1** | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_1/Task_1/) |
+| **Level 1 — Task 2** | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_1/Task_2/) |
+| **Level 3 — Task 1** | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_3/Task_1/) |
+| **Level 3 — Task 2** | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_3/Task_2/) |
 
 > **Status:** Completed — Level 1 and Level 3
 
