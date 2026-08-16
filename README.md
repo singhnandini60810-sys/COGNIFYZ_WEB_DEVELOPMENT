@@ -1,6 +1,6 @@
 # Cognifyz Web Development Internship
 
-**Project Hub**     [Open Project Hub](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/)            
+**Project Hub**         [Open Project Hub](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/)            
 
 This repository contains the web development tasks completed as part of the **Cognifyz Technologies Web Development Internship Program**.
 
@@ -8,7 +8,6 @@ This repository contains the web development tasks completed as part of the **Co
 
 | Project              | Live Demo                                                                                             |
 | -------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Project Hub**      | [Open Project Hub](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/)                 |
 | **Level 1 — Task 1** | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_1/Task_1/) |
 | **Level 1 — Task 2** | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_1/Task_2/) |
 | **Level 3 — Task 1** | [Open Live Project](https://singhnandini60810-sys.github.io/COGNIFYZ_WEB_DEVELOPMENT/Level_3/Task_1/) |
