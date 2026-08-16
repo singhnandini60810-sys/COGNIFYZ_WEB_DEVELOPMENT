@@ -8,10 +8,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Yeseva+One&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Yeseva+One&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
-
     :root {
       --cream: #fff3d6;
       --red: #d92d27;
@@ -44,26 +44,17 @@
       color: inherit;
     }
 
-    /* =================================
-       DECORATIVE BACKGROUND
-    ================================= */
-
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
       opacity: .035;
-
-      background-image:
-        radial-gradient(var(--brown) 1px, transparent 1px);
-
+      background-image: radial-gradient(var(--brown) 1px, transparent 1px);
       background-size: 8px 8px;
     }
 
-    /* =================================
-       NAV
-    ================================= */
+    /* NAV */
 
     nav {
       min-height: 76px;
@@ -102,26 +93,19 @@
 
     .stamp {
       padding: 8px 14px;
-
       border: 2px solid var(--red);
       border-radius: 50%;
-
       color: var(--red);
-
       font-family: "DM Mono", monospace;
       font-size: 8px;
       font-weight: 500;
-
       transform: rotate(6deg);
     }
 
-    /* =================================
-       HERO
-    ================================= */
+    /* HERO */
 
     header {
       min-height: 650px;
-
       padding: 80px 7%;
 
       display: grid;
@@ -161,7 +145,6 @@
       font-weight: 400;
 
       line-height: .82;
-
       letter-spacing: -4px;
     }
 
@@ -172,8 +155,7 @@
 
       -webkit-text-stroke: 1px var(--black);
 
-      text-shadow:
-        4px 4px 0 var(--yellow);
+      text-shadow: 4px 4px 0 var(--yellow);
     }
 
     .hindi {
@@ -183,7 +165,6 @@
 
       font-size: 17px;
       font-weight: 700;
-
       letter-spacing: 3px;
     }
 
@@ -219,9 +200,7 @@
       background: rgba(255,255,255,.3);
     }
 
-    /* =================================
-       HERO ART
-    ================================= */
+    /* HERO ART */
 
     .hero-art {
       min-height: 470px;
@@ -249,8 +228,7 @@
       align-items: center;
       justify-content: center;
 
-      box-shadow:
-        13px 13px 0 var(--pink);
+      box-shadow: 13px 13px 0 var(--pink);
     }
 
     .sun::before {
@@ -275,7 +253,6 @@
 
     .sun-text {
       text-align: center;
-
       position: relative;
       z-index: 2;
     }
@@ -358,9 +335,7 @@
       transform: rotate(9deg);
     }
 
-    /* =================================
-       STRIP
-    ================================= */
+    /* STRIP */
 
     .strip {
       overflow: hidden;
@@ -377,16 +352,12 @@
       text-align: center;
 
       font-family: "DM Mono", monospace;
-
       font-size: 9px;
       font-weight: 500;
-
       letter-spacing: 3px;
     }
 
-    /* =================================
-       PROJECTS
-    ================================= */
+    /* PROJECTS */
 
     main {
       padding: 100px 7% 120px;
@@ -409,7 +380,6 @@
       color: var(--red);
 
       font-size: 8px;
-
       letter-spacing: 3px;
     }
 
@@ -435,48 +405,42 @@
       font-size: 14px;
     }
 
-    /* =================================
-       PROJECT GRID
-    ================================= */
-
     .projects {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      border-top: 2px solid var(--black);
-      border-left: 2px solid var(--black);
+      gap: 28px;
     }
 
     .project {
-      min-height: 390px;
+      min-height: 410px;
 
       padding: 32px;
 
       position: relative;
 
-      border-right: 2px solid var(--black);
-      border-bottom: 2px solid var(--black);
-
       text-decoration: none;
 
       overflow: hidden;
 
-      transition: .25s ease;
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
     }
 
     .project:hover {
-      transform: translate(-5px, -5px);
-
-      box-shadow:
-        8px 8px 0 var(--black);
-
-      z-index: 3;
+      transform: translateY(-7px);
     }
 
     .project-top {
       display: flex;
       justify-content: space-between;
 
+      position: relative;
+      z-index: 3;
+    }
+
+    .project-number {
       font-family: "DM Mono", monospace;
 
       font-size: 8px;
@@ -484,26 +448,17 @@
       letter-spacing: 2px;
     }
 
-    .project-number {
-      opacity: .55;
-    }
-
-    .theme {
-      padding: 6px 9px;
-
-      border: 1px solid currentColor;
-    }
-
     .project h3 {
       max-width: 440px;
 
       margin-top: 55px;
 
-      font-family: "Yeseva One", serif;
-
       font-size: 38px;
 
       line-height: 1;
+
+      position: relative;
+      z-index: 3;
     }
 
     .project > p {
@@ -514,6 +469,9 @@
       font-size: 13px;
 
       line-height: 1.7;
+
+      position: relative;
+      z-index: 3;
     }
 
     .open {
@@ -528,65 +486,384 @@
       font-weight: 500;
 
       letter-spacing: 1px;
+
+      z-index: 4;
     }
 
-    /* DIFFERENT PROJECT WORLDS */
+    /* ===============================
+       LEVEL 1 TASK 1
+       CHATPATTI BADDIE
+    =============================== */
 
     .chatpatti {
-      background: #f66a89;
+      background: #f65d83;
+
+      border: 3px solid #191512;
+
+      box-shadow:
+        8px 8px 0 #f6bd25;
     }
 
-    .chatpatti .theme {
-      color: #6b171d;
-    }
+    .chatpatti::before {
+      content: "✦";
 
-    .fairy {
-      background: #d8c9e8;
-      color: #45364f;
-    }
-
-    .fairy .theme {
-      color: #674d75;
-    }
-
-    .wizard {
-      background: #372018;
-      color: #ead5a6;
-    }
-
-    .wizard .theme {
-      color: #d3ad64;
-    }
-
-    .anime {
-      background: #172c37;
-      color: #e8fbff;
-    }
-
-    .anime .theme {
-      color: #55e7ff;
-    }
-
-    /* decorative card symbols */
-
-    .symbol {
       position: absolute;
 
-      right: 30px;
-      bottom: 20px;
+      width: 150px;
+      height: 150px;
 
+      right: -25px;
+      top: -25px;
+
+      border-radius: 50%;
+
+      background: #d9f04d;
+
+      border: 2px solid #191512;
+
+      display: grid;
+      place-items: center;
+
+      color: #d92d27;
+
+      font-size: 55px;
+
+      transform: rotate(8deg);
+    }
+
+    .chatpatti::after {
+      content: "MIRCHI MODE ON";
+
+      position: absolute;
+
+      right: 22px;
+      bottom: 35px;
+
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50%;
+
+      background: #fff3d6;
+
+      border: 2px solid #191512;
+
+      display: grid;
+      place-items: center;
+
+      text-align: center;
+
+      font-family: "DM Mono", monospace;
+
+      font-size: 9px;
+
+      transform: rotate(-8deg);
+    }
+
+    .chatpatti h3 {
       font-family: "Yeseva One", serif;
 
-      font-size: 100px;
+      color: #191512;
 
-      opacity: .09;
+      text-shadow:
+        2px 2px 0 #f6bd25;
+    }
+
+    .chatpatti .project-number {
+      color: #711c31;
+    }
+
+    .chatpatti .open {
+      background: #191512;
+      color: white;
+
+      padding: 10px 14px;
+    }
+
+    /* ===============================
+       LEVEL 1 TASK 2
+       FAIRYCORE
+    =============================== */
+
+    .fairy {
+      background:
+        radial-gradient(circle at 90% 15%, rgba(255,255,255,.9), transparent 20%),
+        radial-gradient(circle at 20% 80%, #dfead6, transparent 32%),
+        #e6d7ef;
+
+      border: 1px solid #ad9bb7;
+
+      border-radius:
+        70px 15px 70px 15px;
+
+      box-shadow:
+        0 18px 45px rgba(104,80,116,.15);
+
+      color: #54445e;
+    }
+
+    .fairy::before {
+      content: "✧  ⋆  ✦";
+
+      position: absolute;
+
+      right: 25px;
+      top: 28px;
+
+      color: #8f76a0;
+
+      font-size: 27px;
+
+      letter-spacing: 10px;
+
+      animation: twinkle 3s ease-in-out infinite;
+    }
+
+    .fairy::after {
+      content: "❀";
+
+      position: absolute;
+
+      right: 45px;
+      bottom: 30px;
+
+      color: #819979;
+
+      font-size: 80px;
+
+      opacity: .65;
+    }
+
+    @keyframes twinkle {
+      50% {
+        opacity: .3;
+        transform: translateY(-4px);
+      }
+    }
+
+    .fairy h3 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 45px;
+
+      font-weight: 500;
+      font-style: italic;
+
+      color: #665372;
+    }
+
+    .fairy .project-number {
+      color: #83758c;
+    }
+
+    .fairy .open {
+      border: 1px solid #7e6989;
+
+      border-radius: 30px;
+
+      padding: 9px 14px;
+
+      color: #6c5776;
+    }
+
+    /* ===============================
+       LEVEL 3 TASK 1
+       WIZARDING / HARRY POTTER CORE
+    =============================== */
+
+    .wizard {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(180,137,65,.16), transparent 28%),
+        #17110e;
+
+      border: 1px solid #8e7040;
+
+      color: #ead8ae;
+
+      box-shadow:
+        0 18px 55px rgba(0,0,0,.28);
+    }
+
+    .wizard::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 12px;
+
+      border: 1px solid rgba(186,148,83,.35);
 
       pointer-events: none;
     }
 
-    /* =================================
-       ENDING
-    ================================= */
+    .wizard::after {
+      content: "⚜";
+
+      position: absolute;
+
+      right: 35px;
+      top: 35px;
+
+      color: #b89958;
+
+      font-size: 65px;
+
+      opacity: .35;
+    }
+
+    .wizard h3 {
+      font-family: "Cinzel", serif;
+
+      font-size: 33px;
+
+      letter-spacing: 1px;
+
+      color: #e3c887;
+    }
+
+    .wizard .project-number {
+      color: #b89958;
+    }
+
+    .wizard > p {
+      color: #a89673;
+    }
+
+    .wizard .open {
+      color: #d6b96f;
+
+      border-bottom: 1px solid #8e7040;
+
+      padding-bottom: 5px;
+    }
+
+    .wizard .candle-glow {
+      position: absolute;
+
+      width: 160px;
+      height: 160px;
+
+      right: -50px;
+      bottom: -40px;
+
+      border-radius: 50%;
+
+      background: #b98535;
+
+      filter: blur(55px);
+
+      opacity: .16;
+    }
+
+    /* ===============================
+       LEVEL 3 TASK 2
+       ANIME TECH CORE
+    =============================== */
+
+    .anime {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(78,217,255,.08),
+          transparent 35%
+        ),
+        #0c1017;
+
+      border: 1px solid #35d5ff;
+
+      color: #f2fbff;
+
+      box-shadow:
+        8px 8px 0 #ff3ca8;
+    }
+
+    .anime::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.035) 1px,
+          transparent 1px
+        );
+
+      background-size: 25px 25px;
+    }
+
+    .anime::after {
+      content: "</>";
+
+      position: absolute;
+
+      right: 30px;
+      top: 30px;
+
+      width: 95px;
+      height: 95px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid #35d5ff;
+
+      color: #ff3ca8;
+
+      font-family: "DM Mono", monospace;
+
+      font-size: 24px;
+
+      clip-path:
+        polygon(
+          50% 0,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0 75%,
+          0 25%
+        );
+
+      background: #111724;
+
+      box-shadow:
+        0 0 30px rgba(53,213,255,.15);
+    }
+
+    .anime h3 {
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 37px;
+
+      font-weight: 700;
+
+      letter-spacing: -2px;
+    }
+
+    .anime .project-number {
+      color: #35d5ff;
+    }
+
+    .anime > p {
+      color: #8d9baa;
+    }
+
+    .anime .open {
+      padding: 10px 14px;
+
+      background: #ff3ca8;
+      color: #07090d;
+
+      box-shadow:
+        4px 4px 0 #35d5ff;
+    }
+
+    /* ENDING */
 
     .ending {
       min-height: 430px;
@@ -647,9 +924,7 @@
       line-height: 1.7;
     }
 
-    /* =================================
-       FOOTER
-    ================================= */
+    /* FOOTER */
 
     footer {
       min-height: 100px;
@@ -679,9 +954,7 @@
       letter-spacing: 1px;
     }
 
-    /* =================================
-       MOBILE
-    ================================= */
+    /* RESPONSIVE */
 
     @media (max-width: 850px) {
 
@@ -713,8 +986,7 @@
       }
 
       header {
-        padding:
-          70px 6%;
+        padding: 70px 6%;
       }
 
       h1 {
@@ -743,17 +1015,15 @@
       }
 
       main {
-        padding:
-          80px 6%;
+        padding: 80px 6%;
       }
 
       .project {
-        min-height: 410px;
+        min-height: 430px;
       }
 
       footer {
         flex-direction: column;
-
         text-align: center;
       }
     }
@@ -761,10 +1031,8 @@
   </style>
 </head>
 
-
 <body>
 
-  <!-- NAV -->
   <nav>
 
     <div class="logo">
@@ -786,7 +1054,6 @@
   </nav>
 
 
-  <!-- HERO -->
   <header>
 
     <div class="hero-copy">
@@ -861,7 +1128,6 @@
   </div>
 
 
-  <!-- PROJECT DIRECTORY -->
   <main>
 
     <div class="project-heading">
@@ -891,7 +1157,7 @@
     <div class="projects">
 
 
-      <!-- TASK 1 -->
+      <!-- LEVEL 1 TASK 1 -->
 
       <a
         class="project chatpatti"
@@ -902,10 +1168,6 @@
 
           <span class="project-number">
             LEVEL 01 / TASK 01
-          </span>
-
-          <span class="theme">
-            CHATPATTI BADDIE
           </span>
 
         </div>
@@ -924,12 +1186,10 @@
           ENTER PROJECT ↗
         </span>
 
-        <span class="symbol">🌶</span>
-
       </a>
 
 
-      <!-- TASK 2 -->
+      <!-- LEVEL 1 TASK 2 -->
 
       <a
         class="project fairy"
@@ -940,10 +1200,6 @@
 
           <span class="project-number">
             LEVEL 01 / TASK 02
-          </span>
-
-          <span class="theme">
-            FAIRYCORE
           </span>
 
         </div>
@@ -959,29 +1215,25 @@
         </p>
 
         <span class="open">
-          ENTER PROJECT ↗
+          enter the garden ✧
         </span>
-
-        <span class="symbol">✦</span>
 
       </a>
 
 
-      <!-- TASK 3 -->
+      <!-- LEVEL 3 TASK 1 -->
 
       <a
         class="project wizard"
         href="Level_3/Task_1/index.html"
       >
 
+        <div class="candle-glow"></div>
+
         <div class="project-top">
 
           <span class="project-number">
             LEVEL 03 / TASK 01
-          </span>
-
-          <span class="theme">
-            WIZARDING CORE
           </span>
 
         </div>
@@ -997,15 +1249,13 @@
         </p>
 
         <span class="open">
-          ENTER PROJECT ↗
+          OPEN ARCHIVE ↗
         </span>
-
-        <span class="symbol">⚜</span>
 
       </a>
 
 
-      <!-- TASK 4 -->
+      <!-- LEVEL 3 TASK 2 -->
 
       <a
         class="project anime"
@@ -1016,10 +1266,6 @@
 
           <span class="project-number">
             LEVEL 03 / TASK 02
-          </span>
-
-          <span class="theme">
-            ANIME TECH
           </span>
 
         </div>
@@ -1035,10 +1281,8 @@
         </p>
 
         <span class="open">
-          ENTER PROJECT ↗
+          LAUNCH PROJECT ↗
         </span>
-
-        <span class="symbol">未来</span>
 
       </a>
 
@@ -1046,8 +1290,6 @@
 
   </main>
 
-
-  <!-- ENDING -->
 
   <section class="ending">
 
@@ -1068,8 +1310,6 @@
 
   </section>
 
-
-  <!-- FOOTER -->
 
   <footer>
 
