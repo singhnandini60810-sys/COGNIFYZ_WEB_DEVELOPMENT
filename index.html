@@ -1,0 +1,416 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognifyz Web Development Internship | Nandini Singh</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #09090d;
+      --panel: #111118;
+      --text: #f4f2f7;
+      --muted: #9997a5;
+      --line: rgba(255,255,255,.1);
+      --pink: #ff4f91;
+      --purple: #9c73ff;
+      --gold: #d1ad64;
+      --cyan: #55e7ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(156,115,255,.12), transparent 28%),
+        radial-gradient(circle at 85% 20%, rgba(85,231,255,.08), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    nav {
+      min-height: 76px;
+      padding: 0 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+
+    .logo span {
+      color: var(--pink);
+    }
+
+    nav p {
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    header {
+      min-height: 560px;
+      padding: 90px 7% 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      font-family: "DM Mono", monospace;
+      color: var(--cyan);
+      font-size: 9px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 1000px;
+      font-size: clamp(55px, 8vw, 110px);
+      line-height: .86;
+      letter-spacing: -6px;
+    }
+
+    h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--purple);
+    }
+
+    .intro {
+      max-width: 620px;
+      color: var(--muted);
+      margin-top: 28px;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .meta {
+      margin-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .meta span {
+      border: 1px solid var(--line);
+      padding: 9px 13px;
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+      letter-spacing: 1px;
+      color: #b8b5c0;
+    }
+
+    main {
+      padding: 20px 7% 110px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-head {
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+
+    .section-head h2 {
+      font-size: 34px;
+    }
+
+    .section-head span {
+      font-family: "DM Mono", monospace;
+      color: var(--muted);
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      min-height: 330px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: rgba(17,17,24,.78);
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: .25s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,.3);
+    }
+
+    .project::after {
+      content: "";
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      position: absolute;
+      right: -70px;
+      top: -70px;
+      opacity: .15;
+    }
+
+    .chatpatti::after { background: var(--pink); }
+    .fairy::after { background: var(--purple); }
+    .wizard::after { background: var(--gold); }
+    .anime::after { background: var(--cyan); }
+
+    .number {
+      font-family: "DM Mono", monospace;
+      color: #55515e;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .theme {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 7px 10px;
+      border: 1px solid currentColor;
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    .chatpatti .theme { color: var(--pink); }
+    .fairy .theme { color: #c5a8ff; }
+    .wizard .theme { color: var(--gold); }
+    .anime .theme { color: var(--cyan); }
+
+    .project h3 {
+      max-width: 450px;
+      margin-top: 18px;
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .project p {
+      max-width: 430px;
+      margin-top: 16px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 13px;
+    }
+
+    .open {
+      position: absolute;
+      left: 30px;
+      bottom: 28px;
+      font-family: "DM Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    footer {
+      padding: 30px 7%;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #666371;
+      font-family: "DM Mono", monospace;
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 800px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -4px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      nav p {
+        display: none;
+      }
+
+      header {
+        min-height: 500px;
+      }
+
+      h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .project {
+        min-height: 350px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">COGNIFYZ<span>_WEBDEV</span></div>
+    <p>INTERNSHIP PROJECT ARCHIVE // 2026</p>
+  </nav>
+
+  <header>
+    <p class="eyebrow">SELECTED LEVELS // 01 + 03</p>
+
+    <h1>
+      FOUR TASKS.
+      <span>FOUR WORLDS.</span>
+    </h1>
+
+    <p class="intro">
+      A collection of web development internship projects created for
+      Cognifyz Technologies, exploring HTML, CSS, JavaScript, image
+      interaction and landing page design through four distinct visual styles.
+    </p>
+
+    <div class="meta">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JAVASCRIPT</span>
+      <span>RESPONSIVE DESIGN</span>
+      <span>4 / 4 COMPLETE</span>
+    </div>
+  </header>
+
+
+  <main>
+
+    <div class="section-head">
+      <h2>PROJECT DIRECTORY</h2>
+      <span>SELECT A TASK TO ENTER →</span>
+    </div>
+
+
+    <div class="projects">
+
+      <a class="project chatpatti" href="Level_1/Task_1/index.html">
+        <span class="number">LEVEL 01 // TASK 01</span>
+        <span class="theme">CHATPATTi BADDIE</span>
+
+        <h3>HTML & CSS Foundations</h3>
+
+        <p>
+          A bold desi-pop webpage featuring navigation, imagery,
+          page sections and a functional email form.
+        </p>
+
+        <span class="open">OPEN PROJECT ↗</span>
+      </a>
+
+
+      <a class="project fairy" href="Level_1/Task_2/index.html">
+        <span class="number">LEVEL 01 // TASK 02</span>
+        <span class="theme">FAIRYCORE</span>
+
+        <h3>JavaScript Magic</h3>
+
+        <p>
+          An enchanted garden containing a colour-changing bloom,
+          time-aware greeting and number potion calculator.
+        </p>
+
+        <span class="open">OPEN PROJECT ↗</span>
+      </a>
+
+
+      <a class="project wizard" href="Level_3/Task_1/index.html">
+        <span class="number">LEVEL 03 // TASK 01</span>
+        <span class="theme">WIZARDING ARCHIVE</span>
+
+        <h3>Interactive Image Gallery</h3>
+
+        <p>
+          A dark magical archive featuring an automatic image slideshow
+          and click-to-enlarge photograph collection.
+        </p>
+
+        <span class="open">OPEN PROJECT ↗</span>
+      </a>
+
+
+      <a class="project anime" href="Level_3/Task_2/index.html">
+        <span class="number">LEVEL 03 // TASK 02</span>
+        <span class="theme">ANIME TECH CORE</span>
+
+        <h3>Cognifyz Internship Landing Page</h3>
+
+        <p>
+          A futuristic internship landing page with program information,
+          benefits, qualifications, CTA and Cognifyz contact details.
+        </p>
+
+        <span class="open">OPEN PROJECT ↗</span>
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    <span>COGNIFYZ TECHNOLOGIES // WEB DEVELOPMENT INTERNSHIP</span>
+    <span>BUILT BY NANDINI SINGH</span>
+  </footer>
+
+</body>
+</html>
+```
