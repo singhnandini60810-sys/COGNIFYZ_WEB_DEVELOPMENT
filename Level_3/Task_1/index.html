@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Wizarding Archive</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <p class="archive-code">
+            ARCHIVE № 394 · RESTRICTED
+        </p>
+
+        <div class="hero-line"></div>
+
+        <h1>
+            THE WIZARDING
+            <span>ARCHIVE</span>
+        </h1>
+
+        <p class="hero-description">
+            A collection of peculiar photographs recovered
+            from places beyond the ordinary world.
+        </p>
+
+        <div class="ornament">
+            ✦ &nbsp; ⚜ &nbsp; ✦
+        </div>
+
+        <div class="hero-line"></div>
+
+        <p class="scroll-text">
+            SCROLL TO ENTER THE ARCHIVE ↓
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         AUTOMATIC SLIDESHOW
+    ========================== -->
+
+    <main>
+
+        <section class="slideshow-section">
+
+            <div class="section-heading">
+
+                <p>VOL. I</p>
+
+                <h2>Moving Photographs</h2>
+
+                <span>
+                    “Some photographs refuse to remain still.”
+                </span>
+
+            </div>
+
+
+            <div class="slideshow">
+
+                <div class="photo-frame" id="photoFrame">
+
+                    <img
+                        id="slideImage"
+                        src="./assets/archive-01.jpg"
+                        alt="Hogwarts Castle"
+                    >
+
+                    <div class="dark-overlay"></div>
+
+                    <span class="corner corner-tl"></span>
+                    <span class="corner corner-tr"></span>
+                    <span class="corner corner-bl"></span>
+                    <span class="corner corner-br"></span>
+
+
+                    <div class="slide-information">
+
+                        <p id="slideNumber">
+                            PHOTOGRAPH 01 / 06
+                        </p>
+
+                        <h3 id="slideTitle">
+                            Hogwarts Castle
+                        </h3>
+
+                        <span id="slideDescription">
+                            Somewhere beyond the ordinary world
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div class="progress-track">
+                        <div id="progressBar"></div>
+                    </div>
+
+                    <p>
+                        Enchanted photograph changes every 4 seconds
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DECORATIVE DIVIDER -->
+
+        <div class="divider">
+            <div></div>
+            <span>✦</span>
+            <span>⚜</span>
+            <span>✦</span>
+            <div></div>
+        </div>
+
+
+        <!-- =========================
+             CLICKABLE GALLERY
+        ========================== -->
+
+        <section class="gallery-section">
+
+            <div class="section-heading">
+
+                <p>VOL. II</p>
+
+                <h2>The Forbidden Collection</h2>
+
+                <span>
+                    Select a photograph to examine the evidence.
+                </span>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <!-- 01 -->
+
+                <button
+                    class="gallery-card"
+                    data-image="./assets/archive-01.jpg"
+                    data-title="Hogwarts Castle"
+                    data-description="A castle hidden beyond the reach of ordinary eyes."
+                >
+
+                    <div class="gallery-image">
+                        <img
+                            src="./assets/archive-01.jpg"
+                            alt="Hogwarts Castle"
+                        >
+                    </div>
+
+                    <span>ARCHIVE № 001</span>
+
+                    <h3>Hogwarts Castle</h3>
+
+                    <p>LOCATION · CLASSIFIED</p>
+
+                </button>
+
+
+                <!-- 02 -->
+
+                <button
+                    class="gallery-card"
+                    data-image="./assets/archive-02.jpg"
+                    data-title="The Ancient Library"
+                    data-description="Shelves filled with knowledge, secrets and books perhaps best left unopened."
+                >
+
+                    <div class="gallery-image">
+                        <img
+                            src="./assets/archive-02.jpg"
+                            alt="Ancient Library"
+                        >
+                    </div>
+
+                    <span>ARCHIVE № 002</span>
+
+                    <h3>The Ancient Library</h3>
+
+                    <p>RESTRICTED SECTION</p>
+
+                </button>
+
+
+                <!-- 03 -->
+
+                <button
+                    class="gallery-card"
+                    data-image="./assets/archive-03.jpg"
+                    data-title="The Candlelit Hall"
+                    data-description="The candles continue burning long after the corridors fall silent."
+                >
+
+                    <div class="gallery-image">
+                        <img
+                            src="./assets/archive-03.jpg"
+                            alt="Candlelit Hall"
+                        >
+                    </div>
+
+                    <span>ARCHIVE № 003</span>
+
+                    <h3>The Candlelit Hall</h3>
+
+                    <p>RECORDED AFTER CURFEW</p>
+
+                </button>
+
+
+                <!-- 04 -->
+
+                <button
+                    class="gallery-card"
+                    data-image="./assets/archive-04.jpg"
+                    data-title="The Apothecary"
+                    data-description="Bottled remedies, mysterious ingredients and several questionable experiments."
+                >
+
+                    <div class="gallery-image">
+                        <img
+                            src="./assets/archive-04.jpg"
+                            alt="Magical Apothecary"
+                        >
+                    </div>
+
+                    <span>ARCHIVE № 004</span>
+
+                    <h3>The Apothecary</h3>
+
+                    <p>HANDLE WITH CAUTION</p>
+
+                </button>
+
+
+                <!-- 05 -->
+
+                <button
+                    class="gallery-card"
+                    data-image="./assets/archive-05.jpg"
+                    data-title="The Forbidden Forest"
+                    data-description="The deeper one wanders, the less familiar the path becomes."
+                >
+
+                    <div class="gallery-image">
+                        <img
+                            src="./assets/archive-05.jpg"
+                            alt="Misty Forbidden Forest"
+                        >
+                    </div>
+
+                    <span>ARCHIVE № 005</span>
+
+                    <h3>The Forbidden Forest</h3>
+
+                    <p>ENTRY NOT ADVISED</p>
+
+                </button>
+
+
+                <!-- 06 -->
+
+                <button
+                    class="gallery-card"
+                    data-image="./assets/archive-06.jpg"
+                    data-title="The Sorting Hat"
+                    data-description="An ancient enchanted object with an inconvenient habit of knowing precisely where you belong."
+                >
+
+                    <div class="gallery-image">
+                        <img
+                            src="./assets/archive-06.jpg"
+                            alt="Sorting Hat"
+                        >
+                    </div>
+
+                    <span>ARCHIVE № 006</span>
+
+                    <h3>The Sorting Hat</h3>
+
+                    <p>MAGICAL OBJECT № 47</p>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MINISTRY NOTICE
+        ========================== -->
+
+        <section class="notice">
+
+            <span class="notice-symbol">⚠</span>
+
+            <div>
+
+                <h3>MINISTRY NOTICE</h3>
+
+                <p>
+                    These records are intended for authorised
+                    witches, wizards and suspiciously talented
+                    web developers only.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>THE WIZARDING ARCHIVE</p>
+
+        <span>✦</span>
+
+        <p>COGNIFYZ · LEVEL III · TASK I</p>
+
+    </footer>
+
+
+    <!-- =========================
+         IMAGE MODAL
+    ========================== -->
+
+    <div
+        class="modal"
+        id="imageModal"
+        aria-hidden="true"
+    >
+
+        <button
+            class="modal-close"
+            id="closeModal"
+            aria-label="Close enlarged photograph"
+        >
+            &times;
+        </button>
+
+
+        <div class="modal-content">
+
+            <div class="modal-photo">
+
+                <img
+                    id="modalImage"
+                    src="./assets/archive-01.jpg"
+                    alt="Enlarged archive photograph"
+                >
+
+            </div>
+
+
+            <div class="modal-text">
+
+                <span>ARCHIVE EVIDENCE</span>
+
+                <h2 id="modalTitle">
+                    Hogwarts Castle
+                </h2>
+
+                <div class="modal-divider"></div>
+
+                <p id="modalDescription">
+                    Archive description.
+                </p>
+
+                <small>
+                    Press ESC or click outside the record to close.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
