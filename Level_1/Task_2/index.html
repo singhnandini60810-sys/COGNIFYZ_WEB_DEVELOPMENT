@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enchanted Garden | JavaScript</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- decorative background -->
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <span class="sparkle s1">✦</span>
+  <span class="sparkle s2">⋆</span>
+  <span class="sparkle s3">✧</span>
+  <span class="sparkle s4">✦</span>
+  <span class="sparkle s5">⋆</span>
+
+  <header>
+    <a class="brand" href="#">the enchanted garden</a>
+    <span class="task">LEVEL I · JAVASCRIPT</span>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <p class="tiny-title">✧ A LITTLE CORNER OF MAGIC ✧</p>
+
+      <h1>
+        tiny spells for
+        <em>ordinary days.</em>
+      </h1>
+
+      <p class="intro">
+        Wander through the garden and try three little spells,
+        each brought to life with JavaScript.
+      </p>
+
+      <div class="scroll-note">
+        <span>↓</span>
+        wander into the garden
+      </div>
+
+    </section>
+
+
+    <!-- SPELL 1 -->
+    <section class="spell colour-spell">
+
+      <div class="spell-copy">
+
+        <p class="spell-number">spell no. 01</p>
+
+        <h2>
+          cast a
+          <em>colour spell</em>
+        </h2>
+
+        <p>
+          Every bloom carries a different mood.
+          Touch the enchanted flower and let it choose
+          a new colour for you.
+        </p>
+
+        <button id="colourButton" class="soft-button">
+          change the bloom ✦
+        </button>
+
+        <p id="colourName" class="mood">
+          currently: fairy rose
+        </p>
+
+      </div>
+
+
+      <div class="flower-area">
+
+        <span class="little-star star-a">✧</span>
+        <span class="little-star star-b">⋆</span>
+
+        <button
+          id="flower"
+          class="flower"
+          aria-label="Change flower colour"
+        >
+          <span class="petal p1"></span>
+          <span class="petal p2"></span>
+          <span class="petal p3"></span>
+          <span class="petal p4"></span>
+          <span class="petal p5"></span>
+          <span class="petal p6"></span>
+          <span class="flower-center"></span>
+        </button>
+
+        <p>touch the bloom</p>
+
+      </div>
+
+    </section>
+
+
+    <!-- DIVIDER -->
+    <div class="vine-divider">
+      <span>❧</span>
+      <div></div>
+      <span>✦</span>
+      <div></div>
+      <span>❧</span>
+    </div>
+
+
+    <!-- SPELL 2 -->
+    <section class="spell moon-spell">
+
+      <div class="moon-area">
+
+        <div class="moon">
+          <div class="moon-cut"></div>
+          <span>✦</span>
+        </div>
+
+        <span class="moon-star ms1">✧</span>
+        <span class="moon-star ms2">⋆</span>
+        <span class="moon-star ms3">✦</span>
+
+      </div>
+
+
+      <div class="spell-copy moon-copy">
+
+        <p class="spell-number">spell no. 02</p>
+
+        <h2>
+          ask the
+          <em>moon</em>
+        </h2>
+
+        <p>
+          The garden knows whether the sun is rising,
+          shining or sleeping. Ask the moon and receive
+          a greeting meant for this very moment.
+        </p>
+
+        <button id="greetingButton" class="moon-button">
+          whisper to the moon ☾
+        </button>
+
+        <p class="whisper">
+          your greeting follows the current time
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SPELL 3 -->
+    <section class="potion-section">
+
+      <div class="potion-heading">
+
+        <p class="spell-number">spell no. 03</p>
+
+        <h2>
+          brew a little
+          <em>number potion</em>
+        </h2>
+
+        <p>
+          Add two drops of numerical essence and
+          discover what your potion becomes.
+        </p>
+
+      </div>
+
+
+      <div class="potion-table">
+
+        <div class="ingredient">
+
+          <label for="numberOne">
+            first essence
+          </label>
+
+          <input
+            id="numberOne"
+            type="number"
+            placeholder="0"
+          >
+
+        </div>
+
+        <span class="plus">+</span>
+
+        <div class="ingredient">
+
+          <label for="numberTwo">
+            second essence
+          </label>
+
+          <input
+            id="numberTwo"
+            type="number"
+            placeholder="0"
+          >
+
+        </div>
+
+        <button id="calculateButton" class="mix-button">
+          mix the potion ✧
+        </button>
+
+
+        <div class="potion-result">
+
+          <span>your potion reveals</span>
+
+          <strong id="result">✦</strong>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <span>✿</span>
+    <p>made with a little JavaScript magic</p>
+    <p>Cognifyz · Level 1 Task 2</p>
+    <span>✿</span>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
